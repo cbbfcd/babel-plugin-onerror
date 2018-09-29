@@ -1,0 +1,21 @@
+{
+  "name": "babel-plugin-onerror",
+  "version": "0.1.0",
+  "description": "An experimental solution for exception handling and reporting through babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babel",
+    "trycatch",
+    "promise",
+    "error"
+  ],
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/cbbfcd/babel-plugin-onerror"
+  },
+  "author": "bobi",
+  "license": "MIT"
+}
