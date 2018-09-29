@@ -6,3 +6,11 @@
 
 > under development!
 
+# features
+
+- [ ] try...catch...compatibility handling (error message)
+- [ ] Performance problems caused by try...catch
+- [ ] Promise processing
+- [ ] Configurable, users can customize the reporting function or use a third-party library
+- [ ] Queue processing to avoid service collapse caused by intensive reporting
+- [ ] Develop corresponding exception capture solution modules for React and Vue(SSR)
