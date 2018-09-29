@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-onerror",
   "version": "0.1.0",
-  "description": "An experimental solution for exception handling and reporting through babel",
+  "description": "Experimental plugin for exception collection via babel",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js src",
