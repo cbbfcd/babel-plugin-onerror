@@ -23,3 +23,11 @@ const demoFive = function(){
 const demoSix = function/*nocatch*/(){
   console.log('this is demo six')
 }
+
+const demoSeven = () => {
+  console.log('this is demo seven')
+}
+
+const demoEight/*nocatch*/ = () => {
+  console.log('this is demo eight')
+}
