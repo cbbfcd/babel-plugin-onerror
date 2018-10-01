@@ -52,7 +52,7 @@ we can wrap a unified exception information, including function name, file name,
 }
 ```
 
-automatic function at compile stage The package is flexibly controlled by a symbol such as /*nocatch*/.
+automatic function at compile stage The package is flexibly controlled by a symbol such as /\*nocatch\*/.
 
 ```js
 const test = () => {
@@ -86,14 +86,14 @@ I will continue to improve the project and add the test code
 
 ## features
 
-- [ x ] support flexible /*no-?catch*/i! 
+- [x] support flexible /\*no-?catch\*/i! 
 
 ## todos
 
-- [  ] Performance issues with try...catch..
+- [] Performance issues with try...catch..
 
-- [  ] File size will increase 5%-15%
+- [] File size will increase 5%-15%
 
-- [  ] promise
+- [] promise
 
-- [  ] react or vue ...
+- [] react or vue ...
