@@ -11,7 +11,7 @@ export default class Plugin {
     this.reporter = reporter || 'window.reporter'
     this.isThrow = isThrow || false
     this.disabled = disabled || false
-    this.fileName = fileName || 'unkown'
+    this.fileName = fileName || 'unkown file'
     this.types = types
     this.template = template
     this.wrapperTemplateWithoutThrow = this.wrapperTemplateWithoutThrow.bind(this)
@@ -115,7 +115,6 @@ export default class Plugin {
   Function(path, state){
     const types = this.types
     const { file } = state
-
     if(this.disabled) return
 
     if(this.shouldSkip(path)) return

@@ -11,7 +11,9 @@ fs.readFile(path.join(__dirname, '/inputTest.js'), (err, data) => {
     plugins: [
       [myPlugin, {
         reporter: 'myReporter',
-        isThrow: false
+        isThrow: false,
+        disabled: false,
+        fileName: 'inputTest.js'
       }]
     ]
   })

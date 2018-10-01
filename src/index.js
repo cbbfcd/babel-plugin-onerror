@@ -4,10 +4,12 @@
 import Plugin from './Plugin'
 
 export default ({ template, types }) => {
+  
   let plugin = null
-  const method = 'Function'
-  return {
-    pre({opts = {}}){
+  
+  // init the plugin or clear
+  const Program = {
+    enter(path, {opts = {}}){
       plugin = new Plugin(
         opts.reporter,
         opts.isThrow,
@@ -17,15 +19,20 @@ export default ({ template, types }) => {
         template
       )
     },
-    visitor: {
-      [method]: {
-        exit(){
-          plugin[method].apply(plugin, [...arguments])
-        }
-      }
-    },
-    post(){
+    exit(){
       if(plugin) plugin = null
     }
   }
+
+  const method = 'Function'
+
+  const ret = { 
+    visitor: { Program } 
+  }
+
+  ret.visitor[method] = function(){
+    plugin[method].apply(plugin, [...arguments])
+  }
+
+  return ret
 }
