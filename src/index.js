@@ -1,16 +1,31 @@
-import { shouldSkip, handleFunctionBody } from './helper';
-import { wrapperWithThrow, wrapperWithNoThrow } from './template';
+/**
+ * babel-plugin 
+*/
+import Plugin from './Plugin'
 
-export default () => ({
-  visitor: {
-    ArrowFunctionExpression: {
-      exit(path, state) {
-        if (shouldSkip(path)) {
-          return;
+export default ({ template, types }) => {
+  let plugin = null
+  const method = 'Function'
+  return {
+    pre({opts = {}}){
+      plugin = new Plugin(
+        opts.reporter,
+        opts.isThrow,
+        opts.disabled,
+        opts.fileName,
+        types,
+        template
+      )
+    },
+    visitor: {
+      [method]: {
+        exit(){
+          plugin[method].apply(plugin, [...arguments])
         }
-        const wrapperFunction = state.opts.isThrow ? wrapperWithThrow : wrapperWithNoThrow;
-        handleFunctionBody(path, state, wrapperFunction);
-      },
+      }
+    },
+    post(){
+      if(plugin) plugin = null
     }
-  },
-});
+  }
+}
