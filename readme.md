@@ -90,10 +90,10 @@ I will continue to improve the project and add the test code
 
 ## todos
 
-- [] Performance issues with try...catch..
+- [ ] Performance issues with try...catch..
 
-- [] File size will increase 5%-15%
+- [ ] File size will increase 5%-15%
 
-- [] promise
+- [ ] promise
 
-- [] react or vue ...
+- [ ] react or vue ...
