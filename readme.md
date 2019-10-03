@@ -1,5 +1,7 @@
 # babel-plugin-onerror
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cbbfcd/babel-plugin-onerror.svg)](https://greenkeeper.io/)
+
 > The project is experimental in nature, with a unified, automated anomaly capture and reporting scheme
 
 > under develop!
